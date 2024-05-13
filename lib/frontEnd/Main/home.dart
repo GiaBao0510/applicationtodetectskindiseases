@@ -14,6 +14,8 @@ import 'package:applicationtodetectskindiseases/frontEnd/NhanDangBenhDa/camera.d
 import 'package:applicationtodetectskindiseases/frontEnd/NhanDangBenhDa/librayimages.dart';
 import 'package:applicationtodetectskindiseases/frontEnd/Main/huongdansudung.dart';
 import 'package:applicationtodetectskindiseases/frontEnd/Main/MedicalHistoryOfDiagnosis.dart';
+import 'package:applicationtodetectskindiseases/frontEnd/constans/config.dart';
+import 'package:applicationtodetectskindiseases/frontEnd/Main/NetworkConnectionError.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -65,6 +67,8 @@ class HomeInterface extends State<Home>{
   void dispose() {
     super.dispose();
   }
+
+  //Truy cập đến chức năng xem lịch sử
   Future ViewMedicalDiagnosisHistory(BuildContext context) async{
     //kiêm tra xem nguoi dung da dang nhap hay chua
     String taikhoan = await SessionManager().getString('taikhoan');
@@ -95,6 +99,7 @@ class HomeInterface extends State<Home>{
   //Giao diện
   @override
   Widget build(BuildContext context) {
+
     return Stack(
       children: [
         //Toàn màn hình

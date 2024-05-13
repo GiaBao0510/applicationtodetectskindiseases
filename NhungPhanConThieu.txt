@@ -1,0 +1,7 @@
+- Thêm trang người dùng khi đăng nhập thành công (có thể sửa thông tin/ xóa)
+- Thêm chức năng đăng xuất sau khi đã đăng nhập thành công
+- Thêm chatbot với rasa
+> Tùy chọn: Có thể làm giao diện sáng tôi
+- Thêm phần tìm kiếm bệnh biện da liễu gần nhất
++ Thêm đối tượng bệnh viện hoặc phòng khám để họ có thể tiện theo dõi bệnh tình của bệnh nhân
++ Thêm khả năng chat qua lại

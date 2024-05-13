@@ -41,8 +41,6 @@ void main() async{
 
 class RegisterPage extends StatefulWidget{
   final CameraDescription fcamera;
-
-
   const RegisterPage({
     super.key,
     required this.fcamera
@@ -75,7 +73,10 @@ class _register extends State<RegisterPage>{
 
   //Phương thức
   Future save() async {
-    String path = url+"/user/register/";
+    String path = "$url/user/register/";
+    print("Đã lấy URL: $url");
+    print('Đường dẫn: $path');
+
     //Lấy địa chỉ IPV4 của máy tính để chạy
     var res = await http.post(Uri.parse(path),
         headers: {"Content-Type": "application/json"},

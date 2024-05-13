@@ -12,6 +12,8 @@ import 'package:applicationtodetectskindiseases/frontEnd/Main/home.dart';
 import 'package:applicationtodetectskindiseases/frontEnd/Main/chatwithai.dart';
 import 'package:applicationtodetectskindiseases/frontEnd/Main/notification.dart';
 import 'package:applicationtodetectskindiseases/frontEnd/Main/account.dart';
+import 'package:applicationtodetectskindiseases/frontEnd/constans/config.dart';
+import 'package:applicationtodetectskindiseases/frontEnd/Main/NetworkConnectionError.dart';
 
 void main() async{
   //Load thư vien truoc roi moi thuc hien thao tác khac
@@ -117,6 +119,19 @@ class GiaoDienHienThiChinh extends State<HienThi>{
         return Container();
     }
   }
+
+  //Kiểm tra đã kết nối đến internet hay chuưa
+  Future<void> _checkNetworkConnection(BuildContext context) async{
+    await LayDiaChiIPv4();
+    if(checkConnect == 'null'){
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => InterfaceConnectionError(fcamera: fcamera)),
+      );
+    }else{
+      print("Kết nối thành công");
+    }
+  }
   // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
   //3.Phương thức xây dụng giao diện
@@ -124,6 +139,8 @@ class GiaoDienHienThiChinh extends State<HienThi>{
   Widget build(BuildContext context) {
     trangchu = HomeInterface( fcamera: fcamera );
     taikhoan = Account(fcamera: fcamera);
+
+    _checkNetworkConnection(context);
     return SafeArea(
       child:  Scaffold(
         body: Stack(
