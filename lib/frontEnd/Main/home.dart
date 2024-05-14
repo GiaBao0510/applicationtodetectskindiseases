@@ -107,8 +107,10 @@ class HomeInterface extends State<Home>{
             child: Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  begin: Alignment.topLeft, end: Alignment.bottomRight,
-                  colors: [ Colors.blueAccent, Colors.greenAccent ]
+                  colors: [Color(0xff6181ff), Color(0xff3e56d0)],
+                  stops: [0.25, 0.75],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
                 )
               ),
               child: SizedBox(

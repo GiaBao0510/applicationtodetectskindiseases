@@ -11,7 +11,7 @@ import 'package:session_manager/session_manager.dart';
 import 'package:applicationtodetectskindiseases/frontEnd/Main/home.dart';
 import 'package:applicationtodetectskindiseases/frontEnd/Main/chatwithai.dart';
 import 'package:applicationtodetectskindiseases/frontEnd/Main/notification.dart';
-import 'package:applicationtodetectskindiseases/frontEnd/Main/account.dart';
+import 'package:applicationtodetectskindiseases/frontEnd/Main/Account/account.dart';
 import 'package:applicationtodetectskindiseases/frontEnd/constans/config.dart';
 import 'package:applicationtodetectskindiseases/frontEnd/Main/NetworkConnectionError.dart';
 

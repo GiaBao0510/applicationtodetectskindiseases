@@ -44,4 +44,4 @@ app.*.map.json
 
 #Bỏ thư mục này luôn
 lib/backEnd/node_modules
-lib/backEnd/app/config
+/lib/backEnd/app/config
